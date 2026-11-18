@@ -1,35 +1,36 @@
-### 你好，我是孙培杰 👋
+**English** | [简体中文](README.zh-CN.md)
 
-电子科技大学在读。方向是**神经网络与算法的硬件化**——把模型和算法真正落到 RTL 上，
-关心算力、带宽、时序这些绕不过去的约束。
+### Hi, I'm Peijie Sun 👋
+
+Currently a student at the University of Electronic Science and Technology of China (UESTC).
+My focus is **putting neural networks and algorithms into hardware** — getting models and
+algorithms all the way down to RTL, where compute, bandwidth and timing are the constraints
+you can't design around.
 
 ---
 
-### 🎯 现在关心什么
+### 🎯 What I'm thinking about
 
-`神经网络加速器` · `算法硬件化` · `数字前端设计` · `RTL 微架构`
+`Neural network accelerators` · `Algorithm-to-hardware` · `Digital front-end design` · `RTL microarchitecture`
 
-主线是想搞明白一件事：一个算法在软件里跑得好，搬到硅上要付出什么代价，
-以及哪些代价是可以通过设计省掉的。
+The main thread is one question: what does a well-behaved software algorithm have to pay
+once it moves onto silicon — and which of those costs can be designed away?
 
-### 🔧 在做的项目
+### 🔧 What I'm building
 
-**[voq-buffer](https://github.com/jiel2728-jpg/voq-buffer)** — 16 队列虚拟输出队列缓存
+**[voq-buffer](https://github.com/jiel2728-jpg/voq-buffer)** — a 16-queue Virtual Output Queue buffer
 
-交换芯片数据通路的练习：用链表管理共享存储，把 512 个物理槽位在 16 个队列之间
-做完全动态的复用，消除 FIFO 架构的队头阻塞。三块存储体、三个阶段
-（初始化 / PUSH / POP），README 里有逐拍的地址走查。
+An exercise in switch-chip datapath design: shared storage managed by linked lists, so that
+512 physical slots are shared fully and dynamically across 16 queues, eliminating the
+head-of-line blocking of a FIFO architecture. Three memory banks, three phases
+(init / PUSH / POP), with a cycle-by-cycle address walkthrough in the README.
 
-`Verilog-2001` · `UVM 1.2` · `TSMC 65LP 综合 15,742 cells / 约 330 MHz`
+`Verilog-2001` · `UVM 1.2` · `TSMC 65LP synthesis: 15,742 cells / ~330 MHz`
 
-### 🛠 工具链
+### 🛠 Toolchain
 
 `Verilog / SystemVerilog` · `UVM` · `VCS + Verdi` · `ModelSim / Questa` · `Design Compiler` · `SVA`
 
-### 📝 写的一点东西
+### 📝 Writing
 
-- [如何设计一套高效的虚拟输出队列 (VOQ) 机制？](https://zhuanlan.zhihu.com/p/2063218113894684196) — 从队头阻塞讲到链表实现
-
-### 📮 联系
-
-邮箱：sunpeijie@std.uestc.edu.cn
+- [How would you design an efficient Virtual Output Queue (VOQ) mechanism?](https://zhuanlan.zhihu.com/p/2063218113894684196) — from head-of-line blocking to a linked-list implementation *(in Chinese)*
